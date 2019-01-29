@@ -1,40 +1,33 @@
-// const data = {
-//     seed: 'For a long time I used to go to bed early',
-//     temperature: 0.6,
-//     length: 500
-//   };
+const textInput = document.getElementById('textInput');
+const userInput = document.getElementById('userInput')
 
-  const textInput = document.getElementById('textInput');
+textInput.addEventListener('keyup', runEvent)
 
-  const userInput = document.getElementById('userInput')
+function runEvent(e) {
+  console.log(e.target.value)
+  userInput.innerHTML = `${e.target.value}...`
+}
 
-  textInput.addEventListener('keyup', runEvent)
+var buttonShort = document.getElementsByClassName('short')[0]
 
-  function runEvent(e) {
-    console.log(e.target.value)
-    userInput.innerHTML = `${e.target.value}...`
-  }
+var buttonMed = document.getElementsByClassName('medium')[0]
 
-  var buttonShort = document.getElementsByClassName('short')[0]
+var buttonLong = document.getElementsByClassName('long')[0]
 
-  var buttonMed = document.getElementsByClassName('medium')[0]
+buttonShort.addEventListener('click', shortClick)
 
-  var buttonLong = document.getElementsByClassName('long')[0]
+buttonMed.addEventListener('click', medClick)
 
-  buttonShort.addEventListener('click', shortClick)
-
-  buttonMed.addEventListener('click', medClick)
-
-  buttonLong.addEventListener('click', longClick)
+buttonLong.addEventListener('click', longClick)
 
 
-  document.getElementById('proust').style.visibility = 'hidden'
-  
+document.getElementById('proust').style.visibility = 'hidden'
+
 const lstm = ml5.LSTMGenerator('models/proust2/', modelLoaded);
-  
+
 function modelLoaded() {
-    console.log('Model Loaded!');
-  }
+  console.log('Model Loaded!');
+}
 
 function gotData(err, results) {
   console.log(results);
