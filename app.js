@@ -10,15 +10,15 @@ function runEvent(e) {
 
 var buttonShort = document.getElementsByClassName('short')[0]
 
-var buttonMed = document.getElementsByClassName('medium')[0]
+var buttonGen = document.getElementsByClassName('generate')[0]
 
 var buttonLong = document.getElementsByClassName('long')[0]
 
-buttonShort.addEventListener('click', shortClick)
+// buttonShort.addEventListener('click', shortClick)
 
-buttonMed.addEventListener('click', medClick)
+buttonGen.addEventListener('click', genClick)
 
-buttonLong.addEventListener('click', longClick)
+// buttonLong.addEventListener('click', longClick)
 
 
 document.getElementById('proust').style.visibility = 'hidden'
@@ -39,16 +39,16 @@ function gotData(err, results) {
     document.getElementById('proust').innerHTML = results;
 }
 
-function shortClick() {
-  let data = {
-    seed: 'Go to sleep. ',
-    temperature: 0.6,
-    length: 200
-  }
-  lstm.generate(data, gotData)
-}
+// function shortClick() {
+//   let data = {
+//     seed: 'Go to sleep. ',
+//     temperature: 0.6,
+//     length: 200
+//   }
+//   lstm.generate(data, gotData)
+// }
 
-function medClick() {
+function genClick() {
   let data = {
     seed: 'For a long time I would',
     temperature: 0.6,
@@ -57,14 +57,14 @@ function medClick() {
   lstm.generate(data, gotData)
 }
 
-function longClick() {
-  let data = {
-    seed: 'For a long time I would',
-    temperature: 0.6,
-    length: 600
-  }
-  lstm.generate(data, gotData)
-}
+// function longClick() {
+//   let data = {
+//     seed: 'For a long time I would',
+//     temperature: 0.6,
+//     length: 600
+//   }
+//   lstm.generate(data, gotData)
+// }
 
 
 // ========================

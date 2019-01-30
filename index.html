@@ -17,27 +17,26 @@
             <li><a href="#viz-one">About</a></li>    
         </nav>
     </header>
-
-    <section class="about" id="about">
+    <section class="gen-section">
+        <div class="sequence-gen">
         <h3 class="title"></h3>
         <textarea id="textInput" style="width: 300px; height: 70px;" placeholder="Type the beginning of a sentence... Say, four to six words. Then click one of the buttons below."></textarea>
-        <div class="gen-buttons">
-            <button class="short">short</button>
-            <button class="medium">medium</button>
-            <button class="long">long</button>
+        <div class="gen-button">
+            <button class="generate">Generate Sequence</button>
         </div>
         <p class="text-matter" id="userInput"></p>  
         <!-- <p class="text-matter" id="loading"></p> -->
         <p class="text-matter" id="proust"></p>
-        <!-- <div class="flow-buttons">
-            <button></button>
-            <button></button>
-        </div> -->
+        </div>
+        <div class="flow-buttons">
+            <button class="save-cont">Save & Continue</button>
+            <button class="regen">Regenerate Sequence</button>
+            <button class="start-over">Start Over</button>
+        </div>
         <!-- <p class="text-matter" id="result">
             <span id="original"></span>
             <span id="prediction"></span>
         </p> -->
-        <!-- <hr> -->
     </section>
 
 
