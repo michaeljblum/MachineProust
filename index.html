@@ -13,17 +13,18 @@
     <header id="nav-stuff">
         <h2><a href="#hero">Machine / Proust</a></h2>
         <nav>
-            <li><a href="#about">The Main Thing</a></li>
-            <li><a href="#viz-one">About</a></li>    
+            <li><a href="#main-thing">The Main Thing</a></li>
+            <li><a href="#about">About</a></li>    
         </nav>
     </header>
-    <section class="gen-section">
+    <section class="main-thing" id="main-thing">
         <div class="sequence-gen">
-        <h3 class="title"></h3>
-        <textarea id="textInput" style="width: 300px; height: 70px;" placeholder="Type the beginning of a sentence... Say, four to six words. Then click one of the buttons below."></textarea>
+        <h4 class="title">Click this and then do that and something else. One of the buttons does one thing and the other two do another thing. Choose wisely. Some more words to see how they wrap.</h4>
         <div class="gen-button">
             <button class="generate">Generate Sequence</button>
         </div>
+        <textarea id="textInput" style="width: 300px; height: 70px;" placeholder="Type the beginning of the first sentence..."></textarea>
+        
         <p class="text-matter" id="userInput"></p>  
         <!-- <p class="text-matter" id="loading"></p> -->
         <p class="text-matter" id="proust"></p>
@@ -40,7 +41,7 @@
     </section>
 
 
-    <section class="viz-one" id="viz-one">
+    <section class="about" id="about">
         <h3>About</h3>
         <div id="vizOne">
         </div>
