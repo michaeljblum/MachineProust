@@ -1,61 +1,82 @@
 const textInput = document.getElementById('textInput');
 const userInput = document.getElementById('userInput')
 
-textInput.addEventListener('keyup', runEvent)
 
+// Retrieve user input and print to screen followed by "..."
+textInput.addEventListener('keyup', runEvent)
 function runEvent(e) {
   console.log(e.target.value)
   userInput.innerHTML = `${e.target.value}...`
 }
 
-var buttonShort = document.getElementsByClassName('short')[0]
-
-var buttonGen = document.getElementsByClassName('generate')[0]
-
-var buttonLong = document.getElementsByClassName('long')[0]
-
-// buttonShort.addEventListener('click', shortClick)
-
+// Retrieve button and initialize generation
+const buttonGen = document.querySelector('.generate')
 buttonGen.addEventListener('click', genClick)
 
-// buttonLong.addEventListener('click', longClick)
-
-
-document.getElementById('proust').style.visibility = 'hidden'
-
+// Loads model and saves it to variable for use elsewhere
 const lstm = ml5.LSTMGenerator('models/proust2/', modelLoaded);
-
 function modelLoaded() {
   console.log('Model Loaded!');
 }
 
-function gotData(err, results) {
-  console.log(results);
-  document.getElementById('proust').innerHTML = '';
-  //   // document.getElementById('loading').style.visibility = 'hidden'
-  //   document.getElementById('loading').remove()
-    document.getElementById('proust').style.visibility = 'visible'
-  //   // console.log(results);
-    document.getElementById('proust').innerHTML = results;
-}
-
-// function shortClick() {
-//   let data = {
-//     seed: 'Go to sleep. ',
-//     temperature: 0.6,
-//     length: 200
-//   }
-//   lstm.generate(data, gotData)
-// }
-
+// Upon click, initializes generation instructions and calls generate function
 function genClick() {
   let data = {
-    seed: 'For a long time I would',
-    temperature: 0.6,
-    length: 400
+    seed: userInput,
+    temperature: 0.5,
+    length: 300
   }
   lstm.generate(data, gotData)
 }
+
+// Begin generation of text
+var output = '';
+function gotData(err, results) {
+  console.log(results);
+  output += results;
+  var proust = document.getElementById('proust');
+
+  proust.innerHTML = output;
+}
+
+// Clears the generated text
+const startOverButt = document.querySelector(".start-over")
+startOverButt.addEventListener('click', startOver)
+
+function startOver(){
+  console.log("Bah!");
+  proust.innerHTML = ''
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // function longClick() {
 //   let data = {
@@ -117,13 +138,6 @@ function genClick() {
 //     document.getElementById('proust').innerHTML = results;
 //   });
 // }
-
-
-
-
-
-
-
   
 // lstm.generate(data, function(err, results){
 //     // document.getElementById('loading').style.visibility = 'hidden'
