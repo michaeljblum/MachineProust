@@ -92,15 +92,14 @@
   }
 
   section:nth-child(even) {
-    background-image: linear-gradient(to bottom right, rgb(255, 255, 255) 75%, #16c9ff 5%, #4eff66);
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 255) 80%, #16c9ff 5%, #4eff66);
+    border-bottom: 1px dotted black;
   }
   
-  /* section:nth-child(odd) {
-    background-image: linear-gradient(to top left, #ffffff 65%, #5f31cc);
-  } */
+
   
   section:nth-child(odd) {
-    background-image: linear-gradient(to top left, #ffffff 75%, #0004ff 5%, #371783);
+    background-image: linear-gradient(to top left, #ffffff 80%, #0004ff 5%, #371783);
   }
 
 /* ~~~~~~~~~~~~~~~~~~~~ GEN SECTION ~~~~~~~~~~~~~~~~~~~~ */
@@ -145,6 +144,10 @@
   font-size: 20px;
 }
 
+#proust:focus {
+  outline-color: red;
+}
+
 .title {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -183,12 +186,29 @@ button {
   background: #331774;
 }
 
+.generate:active {
+  background: #331774;
+}
+
+.generate:focus, .generate:focus, .generate:focus{
+  outline: 0;
+}
+
 .save-cont, .regen, .start-over  {
   background: #1E88E5;
 }
 
-.save-cont:hover, .regen:hover, .start-over:hover {
+.save-cont:hover, .regen:hover, .start-over:hover{
+  background: #0F6ED0;
+}
+
+
+.save-cont:active, .regen:active, .start-over:active{
     background: #0053ba;
+}
+
+.save-cont:focus, .regen:focus, .start-over:focus{
+    outline: 0;
 }
 
 .buttons {
@@ -211,5 +231,8 @@ h5 {
 /* ~~~~~~~~~~~~~~~~~~~~ ABOUT SECTION ~~~~~~~~~~~~~~~~~~~~ */
 
 .about-container {
-  
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }

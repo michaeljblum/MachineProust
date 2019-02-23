@@ -23,8 +23,8 @@ function modelLoaded() {
 function genClick() {
   let data = {
     seed: userInput,
-    temperature: 0.5,
-    length: 300
+    temperature: 0.55,
+    length: 400
   }
   lstm.generate(data, gotData)
 }
