@@ -156,10 +156,15 @@
 
 textarea {
   resize: none;
+  margin: 15px 20%;
   font-family: 'Molengo', sans-serif;
   font-size: 16px;
   padding: 10px;
   border: 3px solid #cccccc;
+}
+
+.gen-button {
+  margin: 15px 20%;
 }
 
 /* CLEAN UP BUTTONS ETC. */
@@ -222,7 +227,7 @@ button {
 }
 
 #userInput {
-  margin: 20px;
+  margin: 15px 20%;
 }
 
 h5 {
