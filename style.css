@@ -93,7 +93,11 @@
 
   section:nth-child(even) {
     background-image: linear-gradient(to bottom right, rgb(255, 255, 255) 80%, #16c9ff 5%, #4eff66);
-    border-bottom: 1px dotted black;
+    /* border-bottom: 5px solid transparent;
+    /* border-image: linear-gradient(to right, #0099CC 0%, #F27280 15%, #EF4E7B 30%, #A166AB 44%, #5073B8 58%, #1098AD 72%, #07B39B 86%, #6DBA82 100%); */
+    /* border-image: linear-gradient(to right, #371783, #0004ff, #16c9ff, #4eff66);
+    border-image-slice: 1; */
+
   }
   
 
@@ -105,20 +109,17 @@
 /* ~~~~~~~~~~~~~~~~~~~~ GEN SECTION ~~~~~~~~~~~~~~~~~~~~ */
 
   .main-thing {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    /* 80% 10%; */
     height: 100%;
-    grid-gap: .5rem;
     margin: 0 auto;
   }
 
-  .flow-buttons {
-    
+
+  .sequence-gen {
     display: flex;
     flex-direction: column;
-    /* align-items: center;  */
-    width: 70%;
+    /* justify-content: center;
+    align-content: center; */
+    align-items: center;
   }
 
   .about {
@@ -156,16 +157,18 @@
 
 textarea {
   resize: none;
-  margin: 15px 20%;
+  
+  justify-content: center;
   font-family: 'Molengo', sans-serif;
   font-size: 16px;
   padding: 10px;
   border: 3px solid #cccccc;
+  
 }
 
-.gen-button {
+/* .gen-button {
   margin: 15px 20%;
-}
+} */
 
 /* CLEAN UP BUTTONS ETC. */
 
@@ -200,27 +203,64 @@ button {
   outline: 0;
 }
 
-.save-cont, .regen, .start-over  {
-  background: #1E88E5;
+.flow-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px;
 }
 
-.save-cont:hover, .regen:hover, .start-over:hover{
-  background: #0F6ED0;
+.gen-but {
+  border-radius: 30px 60px 90px
+}
+
+.copy-clip {
+  border-radius: 90px 60px 30px
+}
+
+.start-over {
+  border-radius: 30px 90px 60px
+}
+
+.gen-but, .copy-clip, .start-over  {
+
+  margin: 15px;
+  font-size: 16px;
+  display: inline-block;
+  padding: 6px 16px;
+  font-family: "Nova Flat";
+}
+
+.gen-but {
+  
+}
+.gen-but:hover {
+
+}
+.gen-but:active {
+
+}
+
+.copy-clip, .start-over {
+  
+}
+.copy-clip:hover, .start-over:hover {
+
+}
+.copy-clip:active, .start-over:active {
+
 }
 
 
-.save-cont:active, .regen:active, .start-over:active{
-    background: #0053ba;
-}
 
-.save-cont:focus, .regen:focus, .start-over:focus{
+.gen-but:focus, .copy-clip:focus, .start-over:focus{
     outline: 0;
 }
-
+/* 
 .buttons {
   float: left;
   margin-top: 10px;
-}
+} */
 
 ::selection {
   background: #601cff60; /* WebKit/Blink Browsers */
