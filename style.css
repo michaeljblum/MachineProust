@@ -232,10 +232,10 @@ button {
 }
 
 .gen-but {
-  
+  transition: .3s ease-out;
 }
 .gen-but:hover {
-
+  transform: scale(1.05)
 }
 .gen-but:active {
 
