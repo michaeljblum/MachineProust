@@ -233,12 +233,16 @@ button {
 
 .gen-but {
   transition: .3s ease-out;
+  background-color: #0004ff;
 }
 .gen-but:hover {
-  transform: scale(1.05)
+  transform: scale(1.05);
+  background-color: #0003C9;
+
 }
 .gen-but:active {
-
+  background-color: #000292;
+  transition: none;
 }
 
 .copy-clip, .start-over {
