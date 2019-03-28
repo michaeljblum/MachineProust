@@ -27,6 +27,7 @@ function genClick() {
     length: 400
   }
   lstm.generate(data, gotData)
+  buttonGen.innerHTML = "Add sequence"
 }
 
 // Begin generation of text
@@ -46,6 +47,7 @@ startOverButt.addEventListener('click', startOver)
 function startOver(){
   console.log("Bah!");
   proust.innerHTML = ''
+  buttonGen.innerHTML = "Generate!"
 }
 
 

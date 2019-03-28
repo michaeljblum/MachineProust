@@ -100,8 +100,6 @@
 
   }
   
-
-  
   section:nth-child(odd) {
     background-image: linear-gradient(to top left, #ffffff 80%, #0004ff 5%, #371783);
   }
@@ -113,12 +111,13 @@
     margin: 0 auto;
   }
 
+  #textInput { 
+    margin-top: 3rem;
+  }
 
   .sequence-gen {
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-content: center; */
     align-items: center;
   }
 
@@ -165,12 +164,6 @@ textarea {
   border: 3px solid #cccccc;
   
 }
-
-/* .gen-button {
-  margin: 15px 20%;
-} */
-
-/* CLEAN UP BUTTONS ETC. */
 
 button {
   border: 0; 
@@ -224,7 +217,7 @@ button {
 
 .gen-but, .copy-clip, .start-over  {
 
-  margin: 15px;
+  margin: 10px;
   font-size: 16px;
   display: inline-block;
   padding: 6px 16px;
@@ -236,7 +229,7 @@ button {
   background-color: #0004ff;
 }
 .gen-but:hover {
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
   background-color: #0003C9;
 
 }
@@ -246,13 +239,15 @@ button {
 }
 
 .copy-clip, .start-over {
-  
+  background-color: #5900ff;
+  transition: .3s ease-out;
 }
 .copy-clip:hover, .start-over:hover {
-
+  background-color: #4900D1;
 }
 .copy-clip:active, .start-over:active {
-
+  background-color: #3900a3;
+  transition: none;  
 }
 
 
