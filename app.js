@@ -28,7 +28,6 @@ function genClick() {
     length: 400
   }
   lstm.generate(data, gotData)
-  buttonGen.innerHTML = "Add sequence"
 }
 
 // Begin generation of text
@@ -39,6 +38,7 @@ function gotData(err, results) {
   var proust = document.getElementById('proust');
   
   proust.innerHTML = output;
+  buttonGen.innerHTML = "Add sequence"
 }
 
 // Clears the generated text
