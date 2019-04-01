@@ -262,7 +262,8 @@ button {
 } */
 
 ::selection {
-  background: #601cff60; /* WebKit/Blink Browsers */
+  background: #4602e49d; /* WebKit/Blink Browsers */
+  color: white;
 }
 
 #userInput {

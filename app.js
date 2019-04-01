@@ -14,7 +14,7 @@ const buttonGen = document.querySelector('.generate')
 buttonGen.addEventListener('click', genClick)
 
 // Loads model and saves it to variable for use elsewhere
-const lstm = ml5.LSTMGenerator('models/proust2/', modelLoaded);
+const lstm = ml5.LSTMGenerator('models/proust4/', modelLoaded);
 function modelLoaded() {
   console.log('Model Loaded!');
 }
@@ -23,7 +23,8 @@ function modelLoaded() {
 function genClick() {
   let data = {
     seed: userInput,
-    temperature: 0.55,
+    temperature: 0.6,
+    // temperature: 0.55,
     length: 400
   }
   lstm.generate(data, gotData)
@@ -47,6 +48,7 @@ startOverButt.addEventListener('click', startOver)
 function startOver(){
   console.log("Bah!");
   proust.innerHTML = ''
+  output = ''
   buttonGen.innerHTML = "Generate!"
 }
 
