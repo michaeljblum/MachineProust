@@ -287,3 +287,7 @@ h5 {
   font-family: 'Nova Flat', cursive;
   margin-bottom: 2rem;
 }
+
+.about-text {
+  text-align: left;
+}
